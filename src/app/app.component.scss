@@ -1,0 +1,15 @@
+body{
+    margin: 3px;
+    background-color: grey;
+}
+
+.inline{
+    display: flex;
+    width: 85%;
+    
+}
+.child{
+    flex: 1;
+    border: 2px solid blueviolet;
+    margin: 30px;
+}
