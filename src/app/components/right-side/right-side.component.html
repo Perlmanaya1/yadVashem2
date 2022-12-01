@@ -1,0 +1,41 @@
+<div class="inline">
+<div  class="rightSideContainer">
+<!-- <mat-tab-group > 
+    <mat-tab *ngIf="rightSides" label="kjhui"> dgs </mat-tab> 
+</mat-tab-group> -->
+
+<!-- <nav mat-tab-nav-bar  [tabPanel]="tabPanel">
+  <a mat-tab-link *ngFor="let link of links"
+     (click)="activeLink = link"
+     [active]="activeLink == link"> {{link}} </a>
+</nav>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel> -->
+
+<mat-tab-group [selectedIndex]="selected.value"
+(selectedIndexChange)="selected.setValue($event)">
+  <mat-tab *ngFor="let tab of links; let index = index" [label]="tab">
+    <div *ngIf = "tab == 'RESCUE'">Contents for {{tab}} tab
+
+     <div *ngFor = "let detail of rightSides[indexR].elements.details">
+      
+        <h1> {{detail.title}}</h1>
+        <div *ngFor ="let valuer in detail.value">{{valuer.value}}</div>
+      <!-- <p >
+      
+      </p> -->
+
+    
+      
+     <!-- </div>> 
+    </div>
+    
+  </mat-tab>
+</mat-tab-group>
+
+</div>
+
+</div>
+<!-- 
+
+**ngIf="!!rightSide[1]"
+**ngIf="!!rightSide[2]" -->
